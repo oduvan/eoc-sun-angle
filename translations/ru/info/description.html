@@ -1,0 +1,53 @@
+<!-- Describe task in general -->
+
+<p>
+    Любой настоящий путешественник должен уметь делать три вещи: добывать огонь, находить воду и извлекать полезную информацию из природы, окружающей его. Программирование не поможет вам с огнем и водой, но с добычей информации справится вполне.
+</p>
+
+<p>
+    Ваша задача - определить угол солнца над горизонтом, зная время суток. Исходные данные: солнце встает на востоке в 6:00, что соответствует углу 0 градусов. В 12:00 солнце в зените, а значит угол = 90 градусов. В 18:00 солнце садится за горизонт и угол равен 180 градусов. В случае, если указано ночное время (раньше 6:00 или позже 18:00), функция должна вернуть фразу "I don't see the sun!".
+</p>
+
+
+<p style="text-align: center;">
+    <img  title="Sun angle" src="{{MEDIA}}sun.png" alt="example" style="max-height: 400px">
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Входные данные: </strong> Время.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> Угол солнца над горизонтом, округленный до 2 знаков после запятой.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Пример:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">sunAngle("07:00") == 15
+sunAngle("12:15"] == 93.75
+sunAngle("01:23") == "I don't see the sun!"</pre>
+{% else %}
+<pre class="brush: python">sun_angle("07:00") == 15
+sun_angle("12:15"] == 93.75
+sun_angle("01:23") == "I don't see the sun!"</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Жизненно необходимый навык для любого путешественника, особенно в случае утери компаса и разрядившегося мобильного телефона с GPS. Правда, в такой ситуации приходится решать обратную задачу - определять время по углу солнца и производить несколько дополнительных расчетов.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Предусловия</strong>:<br>
+    00:00 <= время <= 23:59
+</p>
