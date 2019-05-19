@@ -1,5 +1,5 @@
 
-function sunAngle(dayTime: string) {
+export function sunAngle(dayTime: string) {
     // your code here
     return dayTime;
 }
