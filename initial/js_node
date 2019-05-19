@@ -1,17 +1,15 @@
-"use strict";
 
-function sunAngle(dayTime) {
+function sunAngle(dayTime: string) {
     // your code here
     return dayTime;
 }
 
-var assert = require('assert');
-if (!global.is_checking) {
-    console.log('Example:')
-    console.log(sunAngle("07:00"))
+import * as assert from 'assert';
 
-    // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(rocks("07:00"), 15)
-    assert.equal(rocks("01:23"), "I don't see the sun!")
-    console.log("Coding complete? Click 'Check' to earn cool rewards!");
-}
+console.log('Example:')
+console.log(sunAngle("07:00"))
+
+// These "asserts" are used for self-checking and not for an auto-testing
+assert.equal(sunAngle("07:00"), 15)
+assert.equal(sunAngle("01:23"), "I don't see the sun!")
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
